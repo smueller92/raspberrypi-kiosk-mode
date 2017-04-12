@@ -23,7 +23,16 @@
 (sudo nano /boot/config.txt)<br />
 (Delete '#' Comment before 'disable_overscan=1')<br />
 - sudo reboot now
-### Installation from USB: 
+### Set a different default Content page
+- Open RaspberryPI_Kiosk_Install_Script.sh
+```
+sudo nano RaspberryPI_Kiosk_Install_Script.sh
+```
+- Change Hyperlink in Line 26 to the desired Location
+```
+echo "#kweb -KAJBHq http://www.google.com"  >> /etc/X11/openbox/autostart
+```
+## Installation from USB: 
 Open Terminal and type 'lsblk' to list all devices and check your USB type (e.g. sda1)
 ```
 sudo mkdir /mnt/usb
@@ -36,21 +45,13 @@ Make Script File executeable and run it as admin
 sudo chmod +x RaspberryPI_Kiosk_Install_Script.sh
 sudo ./RaspberryPI_Kiosk_Install_Script.sh
 ```
-### Installation from Raspberry SD Card: 
+## Installation from Raspberry SD Card: 
 ```
 cd [LOCATION OF SCRIPT]
 sudo chmod +x RaspberryPI_Kiosk_Install_Script.sh
 sudo ./RaspberryPI_Kiosk_Install_Script.sh
 ```
-### Set a different default Content page
-- Open RaspberryPI_Kiosk_Install_Script.sh
-```
-sudo nano RaspberryPI_Kiosk_Install_Script.sh
-```
-- Change Hyperlink in Line 26 to the desired Location
-```
-echo "#kweb -KAJBHq http://www.google.com"  >> /etc/X11/openbox/autostart
-```
+
 
 
 
