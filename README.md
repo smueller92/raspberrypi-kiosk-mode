@@ -1,16 +1,14 @@
 # Create a simple Raspberry Pi Kiosk Screen by using one quick Script:
 ## Features:
 - Kioskmode (e.g. for a museum)
-- Raspberry Pi with reduced OS
-- SSH Remote Terminal Control 
+- Raspberry Pi with reduced OS (Removed unused Packages)
+- SSH Remote Terminal Control (e.g. PuTTy.exe)
 - Only Webbrowser as graphical Interface  (Default Page: www.google.com)
 - Webserver can deliver Content
 - Networkconnection via Ethernet
 - Display: Screen/Projector over HDMI
 - Control: Mouse/Touch
 - Maintenance over SSH Remote Control
-
-
 ## Installation
 - Download Raspbian Jessie Lite Image (WITHOUT Pixel): https://www.raspberrypi.org/downloads/raspbian/ <br />
 (Tested with Jessie Lite 11.25.2016)
@@ -51,10 +49,6 @@ cd [LOCATION OF SCRIPT]
 sudo chmod +x RaspberryPI_Kiosk_Install_Script.sh
 sudo ./RaspberryPI_Kiosk_Install_Script.sh
 ```
-
-
-
-
 ### Useful Commands:
 - List all Packages with a short description:   **dpkg -l**
 - Full package description:   **dpkg-query --show --showformat '${Description}\n' [PAKETNAME]**
