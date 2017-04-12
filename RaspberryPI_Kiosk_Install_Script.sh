@@ -21,6 +21,7 @@ cd kweb-1.6.9
 ./debinstall 
 cd ~
 
+#>>>>>>>>>>>>>>>>>>>>>>>>>CHANGE THIS LINE FOR A DIFFERENT CONTENT PAGE<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 #Add kweb Browser (Kiosk-Mode) to Openbox Autostart and set www.google.com as default Contentpage
 echo "#kweb -KAJBHq http://www.google.com"  >> /etc/X11/openbox/autostart
 
