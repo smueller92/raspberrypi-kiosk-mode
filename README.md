@@ -3,7 +3,7 @@
 - Kioskmode (e.g. for a museum)
 - Raspberry Pi with reduced OS
 - SSH Remote Terminal Control 
-- Only Webbrowser as graphical Interface 
+- Only Webbrowser as graphical Interface  (Default Page: www.google.com)
 - Webserver can deliver Content
 - Networkconnection via Ethernet
 - Display: Screen/Projector over HDMI
@@ -42,6 +42,18 @@ cd [LOCATION OF SCRIPT]
 sudo chmod +x RaspberryPI_Kiosk_Install_Script.sh
 sudo ./RaspberryPI_Kiosk_Install_Script.sh
 ```
+### Set a different default Content page
+- Open RaspberryPI_Kiosk_Install_Script.sh
+```
+sudo nano RaspberryPI_Kiosk_Install_Script.sh
+```
+- Change Hyperlink in Line 26 to the desired Location
+```
+echo "#kweb -KAJBHq http://www.google.com"  >> /etc/X11/openbox/autostart
+```
+
+
+
 ### Useful Commands:
 - List all Packages with a short description:   **dpkg -l**
 - Full package description:   **dpkg-query --show --showformat '${Description}\n' [PAKETNAME]**
